@@ -213,6 +213,8 @@ module.exports = function (grunt) {
             },
             src: {
                 files: [
+                    '.env',
+                    '.env.example',
                     '<%= path.src %>/js/**/*.js',
                     '<%= path.src %>/less/**/*.less',
                     '<%= path.src %>/tpl/**/*.html'

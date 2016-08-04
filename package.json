@@ -28,7 +28,7 @@
     "postinstall": "npm run createenv && grunt serve",
     "uninstall": "rm -rf node_modules/ tmp/ .env",
     "test": "grunt test",
-    "postmerge": "npm update && grunt dev"
+    "postmerge": "npm update && grunt temp"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
