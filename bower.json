@@ -17,7 +17,6 @@
   "license": "MIT",
   "moduleType": "globals",
   "homepage": "https://github.com/honzahommer/ga-js#readme",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
