@@ -91,7 +91,8 @@ module.exports = function (grunt) {
                     useAvailablePort: true,
                     base: '<%= path.temp %>',
                     livereload: true,
-                    open: true
+                    open: true,
+                    hostname: process.env.HOSTNAME
                 }
             }
         },
