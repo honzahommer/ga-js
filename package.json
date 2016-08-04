@@ -1,5 +1,5 @@
 {
-  "name": "ga-js",
+  "name": "ga.js",
   "version": "0.0.0",
   "description": "A JavaScript library that helps you set up Google Analytics.",
   "keywords": [
@@ -13,15 +13,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honzahommer/ga-js.git"
+    "url": "git+https://github.com/honzahommer/ga.js.git"
   },
   "authors": [
     "Honza Hommer <honza@hommer.cz>"
   ],
   "bugs": {
-    "url": "https://github.com/honzahommer/ga-js/issues"
+    "url": "https://github.com/honzahommer/ga.js/issues"
   },
-  "homepage": "https://github.com/honzahommer/ga-js#readme",
+  "homepage": "https://github.com/honzahommer/ga.js#readme",
   "scripts": {
     "createenv": "cp -n .env.example .env",
     "preinstall": "npm install -g coffee-script jshint jsonlint grunt grunt-cli",

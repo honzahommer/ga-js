@@ -1,5 +1,5 @@
 {
-  "name": "ga-js",
+  "name": "ga.js",
   "description": "A JavaScript library that helps you set up Google Analytics.",
   "keywords": [
     "google",
@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "moduleType": "globals",
-  "homepage": "https://github.com/honzahommer/ga-js#readme",
+  "homepage": "https://github.com/honzahommer/ga.js#readme",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -42,8 +42,6 @@ module.exports = function (grunt) {
             }
         },
 
-        kickoff: process.env.KICKOFF,
-
         path: {
             dist: process.env.PATH_PUB,
             src: process.env.PATH_SRC,
@@ -67,7 +65,7 @@ module.exports = function (grunt) {
                     sourceMap: false
                 },
                 src: '<%= path.temp %>/js/*.js',
-                dest: '<%= path.dist %>/js/<%= kickoff %>.js'
+                dest: '<%= path.dist %>/js/ga.js'
             }
         },
 
@@ -158,7 +156,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: '<%= concat.dist.dest %>',
-                dest: '<%= path.dist %>/js/<%= kickoff %>.min.js'
+                dest: '<%= path.dist %>/js/ga.min.js'
             }
         },
 
