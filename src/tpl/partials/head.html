@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><!-- @@title --> &ndash; <!-- @@name --></title>
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+    <!-- build:less css/dev/bundle.css -->
+        <link type="stylesheet/less" href="../../less/dev/app.less">
+    <!-- endbuild -->
+    <!-- build:js js/ga.js -->
+        <script src="../../js/ga.js"></script>
+    <!-- endbuild -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', '<!-- @@ga-id -->', 'auto');
+    </script>
+</head>
+<body>
+
+<div class="navbar-wrapper header">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="."><!-- @@name --></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Link</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                    </ul>
+                    <form action="e-shop-detail.html" class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="search" name="q" class="form-control"
+                                placeholder="What are you looking for?">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

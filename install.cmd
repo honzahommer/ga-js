@@ -1,0 +1,2 @@
+:; CALL() { $@; }
+CALL npm install
