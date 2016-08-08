@@ -29,9 +29,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*!\n' +
-            ' * <%= pkg.name %> v<%= pkg.version %>\n' +
-            ' * ' + grunt.file.read('LICENSE') +
-            ' */\n',
+            ' * <%= pkg.name %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>.\n' +
+            ' * Licensed under the <%= pkg.license %> licence\n' +
+            ' */\n\n',
 
         availabletasks: {
             tasks: {
@@ -44,6 +45,7 @@ module.exports = function (grunt) {
 
         path: {
             dist: process.env.PATH_PUB,
+            npm: process.env.PATH_NPM,
             src: process.env.PATH_SRC,
             temp: process.env.PATH_TMP
         },
@@ -64,8 +66,16 @@ module.exports = function (grunt) {
                     stripBanners: true,
                     sourceMap: false
                 },
-                src: '<%= path.temp %>/js/*.js',
-                dest: '<%= path.dist %>/js/ga.js'
+                files: [
+                    {
+                        src: '<%= path.temp %>/js/ga.js',
+                        dest: '<%= path.dist %>/js/ga.js'
+                    },
+                    {
+                        src: '<%= path.temp %>/js/ga.plugin.js',
+                        dest: '<%= path.dist %>/js/ga.plugin.js'
+                    }
+                ]
             }
         },
 
@@ -101,6 +111,7 @@ module.exports = function (grunt) {
                 suffix: ' -->',
                 includesDir: '<%= path.temp %>/tpl/partials',
                 globals: {
+                    debug: process.env.DEBUG,
                     name: '<%= pkg.name %>',
                     title: '<%= pkg.description %>',
                     ga_id: process.env.GA_ID
@@ -151,12 +162,20 @@ module.exports = function (grunt) {
                 compress: {
                     warnings: false
                 },
-                mangle: true,
-                preserveComments: 'some'
+                mangle: true
             },
             dist: {
-                src: '<%= concat.dist.dest %>',
-                dest: '<%= path.dist %>/js/ga.min.js'
+                options: {
+                    banner: '<%= banner %>'
+                },
+                files: [{
+                    src: '<%= path.dist %>/js/ga.js',
+                    dest: '<%= path.dist %>/js/ga.min.js'
+                }, {
+                    src: '<%= path.dist %>/js/ga.plugin.js',
+                    dest: '<%= path.dist %>/js/ga.plugin.min.js'
+                }]
+
             }
         },
 
@@ -270,7 +289,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('release', 'Bump version, build dist files and push new version into git repository.', [
         'test',
-        'bump-only:' + (grunt.option('bump') || 'minor'),
+        'bump-only' + (grunt.option('bump') ? (':' + grunt.option('bump')) : ''),
         'dist',
         'bump-commit'
     ]);

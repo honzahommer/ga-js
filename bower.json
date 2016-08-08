@@ -11,9 +11,7 @@
   "main": [
     "dist/js/ga.js"
   ],
-  "authors": [
-    "Honza Hommer <honza@hommer.cz>"
-  ],
+  "authors": "Honza Hommer <honza@hommer.cz>",
   "license": "MIT",
   "moduleType": "globals",
   "homepage": "https://github.com/honzahommer/ga.js#readme",
