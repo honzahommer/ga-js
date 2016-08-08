@@ -1,0 +1,6 @@
+{
+  "name": "ga.js",
+  "tagline": "A JavaScript library that helps you set up Google Analytics.",
+  "body": "> :warning: **Under heavy development, not production ready, stay tuned!**",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
